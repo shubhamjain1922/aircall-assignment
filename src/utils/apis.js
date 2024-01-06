@@ -1,5 +1,4 @@
 import axios from "axios";
-import Toaster from "./toaster";
 
 const baseURL = "https://cerulean-marlin-wig.cyclic.app/";
 
