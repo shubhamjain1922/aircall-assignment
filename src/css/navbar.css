@@ -1,0 +1,44 @@
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 13px 20px;
+  position: relative;
+}
+
+.nav-container .nav-item {
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-container .nav-item-highlighter {
+  width: 85px;
+  height: 55%;
+  background: #47b33f;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  visibility: hidden;
+  transition: left .25s;
+}
+
+.nav-container .nav-item.active {
+  color: #fff;
+}
+
+.nav-container .nav-item.active ~ .nav-item-highlighter {
+  visibility: visible;
+}
+
+.nav-container .nav-item.active.item-0 ~ .nav-item-highlighter {
+  left: 30%;
+}
+
+.nav-container .nav-item.active.item-1 ~ .nav-item-highlighter {
+  left: 67%;
+}
